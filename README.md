@@ -1,6 +1,11 @@
+# ZSH 
+
+oh-my-zsh 
+zsh-autosuggestions : https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+powerline10k 
+
 
 lxappearance : change window title 
-
 
 # i3 starter pack 
 
