@@ -1,6 +1,6 @@
 [bar/i3wmthemer_bar]
 width = 100%
-height = 20
+height = 27
 radius = 0
 fixed-center = false
 
@@ -18,7 +18,6 @@ padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 2
-module-margin-bottom = 2
 
 font-0 = "Source Code Pro Semibold:size=10;1"
 font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
@@ -26,10 +25,10 @@ font-2 = "Font Awesome 5 Brands:size=10;1"
 
 modules-left = i3
 modules-center = date
-modules-right = wlan eth volume battery powermenu
+modules-right = wlan eth powermenu
 
-tray-position = right
-tray-padding = 10
+tray-position =
+;tray-padding =
 wm-restack = i3
 override-redirect = false 
 
@@ -65,25 +64,25 @@ label-urgent = %index%
 label-urgent-background = #BA2922
 label-urgent-padding = 2
 
-;[module/wlan]
-;type = internal/network
-;interface = wlp2s0:
-;interval = 3.0
+[module/wlan]
+type = internal/network
+interface = net1
+interval = 3.0
 
-;format-connected = <ramp-signal> <label-connected>
-;format-connected-foreground = #9d6a47
-;format-connected-background = #9d6a47
-;format-connected-padding = 2
-;label-connected = %essid%
-;
-;format-disconnected =
-;
-;ramp-signal-0 = 
-;ramp-signal-1 = 
-;ramp-signal-2 = 
-;ramp-signal-3 = 
-;ramp-signal-4 = 
-;ramp-signal-foreground = #1E272B
+format-connected = <ramp-signal> <label-connected>
+format-connected-foreground = #9d6a47
+format-connected-background = #9d6a47
+format-connected-padding = 2
+label-connected = %essid%
+
+format-disconnected =
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = #1E272B
 
 [module/eth]
 type = internal/network
@@ -101,7 +100,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 1
+interval = 5
 
 date =
 date-alt = " %Y-%m-%d"
@@ -115,47 +114,6 @@ format-background = #d99f57
 format-padding = 2
 
 label = %date% %time%
-
-[module/volume]
-type = internal/alsa
-;speaker-mixer = Speaker
-;headphone-mixer = Headphone
-;headphone-id = 16
-;mapped = true
-format-volume = <ramp-volume> <label-volume>
-label-volume = %percentage%%
-format-muted-prefix = " "
-label-muted = MUTE
-
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-4 = 
-ramp-volume-5 = 
-ramp-volume-6 = 
-
-
-[module/battery]
-type = internal/battery
-full-at = 99
-time-format = %H:%M
-battery = BAT1
-adapter = AC
-format-charging = <animation-charging> <label-charging>
-;label-charging = %percentage%% (%time%)
-label-charging = %percentage%%
-format-discharging = <ramp-capacity> <label-discharging>
-;label-discharging = %percentage%% (%time%)
-label-discharging = %percentage%%
-format-full = <label-full>
-
-format-full-prefix = " "
-
-ramp-capacity-0-foreground = ${color.red}
-ramp-capacity-foreground   = ${color.fg}
-bar-capacity-width = 10
-
 
 [module/powermenu]
 type = custom/menu
@@ -199,4 +157,3 @@ screenchange-reload = true
 [global/wm]
 margin-top = 0
 margin-bottom = 0
-
