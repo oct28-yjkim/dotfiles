@@ -11,3 +11,10 @@ autologin-user=yjkim1
 # disable problam detection couse openfortivpn
 sudo vi /etc/default/apport 
 enabled=0 # 0 disable, 1 enable 
+
+# user grant root privileges an sudoers
+sudo bash -c 'cat << EOF > /etc/sudoers.d/yjkim1
+yjkim1 ALL=(ALL:ALL)ALL
+EOF'
+sudo usermod -aG sudo yjkim1
+
