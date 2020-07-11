@@ -1,8 +1,0 @@
-# This file is created by ibus-daemon, please do not modify it
-<<<<<<< HEAD
-IBUS_ADDRESS=unix:abstract=/tmp/ibus/dbus-c1kmK2n1,guid=fcc8f6baf86508532a66f1085e57156b
-IBUS_DAEMON_PID=6977
-=======
-IBUS_ADDRESS=unix:abstract=/tmp/ibus/dbus-NsWNRhAM,guid=9831179147423344e8ca05425e56a27b
-IBUS_DAEMON_PID=8555
->>>>>>> a8f9c0e8b8a31fffa22537949686e10a2d7f1554
