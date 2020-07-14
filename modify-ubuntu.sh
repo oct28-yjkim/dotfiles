@@ -18,3 +18,11 @@ yjkim1 ALL=(ALL:ALL)ALL
 EOF'
 sudo usermod -aG sudo yjkim1
 
+
+# default Timeout 
+vi /etc/systemd/system.conf 
+DefaultTimeoutStopSec=1s
+
+
+# ubuntu window time setting 
+timedatectl set-local-rtc 1 --adjust-system-clock
