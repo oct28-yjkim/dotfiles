@@ -1,5 +1,4 @@
 # container base cli 
 * kubectl, helmctl 
 * wine + kakaotalk 
-* kvm 
-
+* kvm
